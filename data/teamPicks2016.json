@@ -1,0 +1,309 @@
+{
+	"teams":[{
+		"Tennessee Titans":[
+		    {"Round": 1, "RoundNumber": 1, "TotalNumber": 1, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 2, "TotalNumber": 33, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 1, "TotalNumber": 64, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 15, "TotalNumber": 113, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 1, "TotalNumber": 140, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 2, "TotalNumber": 177, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 18, "TotalNumber": 193, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 1, "TotalNumber": 222, "Compensatory": false}  
+		],
+		"Cleveland Browns":[
+		    {"Round": 1, "RoundNumber": 2, "TotalNumber": 2, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 1, "TotalNumber": 32, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 2, "TotalNumber": 65, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 1, "TotalNumber": 99, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 40, "TotalNumber": 138, "Compensatory": true},
+		    {"Round": 5, "RoundNumber": 2, "TotalNumber": 141, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 35, "TotalNumber": 172, "Compensatory": true},
+		    {"Round": 5, "RoundNumber": 36, "TotalNumber": 173, "Compensatory": true},
+		    {"Round": 6, "RoundNumber": 1, "TotalNumber": 176, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 2, "TotalNumber": 223, "Compensatory": false}  
+		],
+		"San Diego Chargers":[
+		    {"Round": 1, "RoundNumber": 3, "TotalNumber": 3, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 4, "TotalNumber": 35, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 3, "TotalNumber": 66, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 4, "TotalNumber": 102, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 3, "TotalNumber": 142, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 38, "TotalNumber": 175, "Compensatory": true},
+		    {"Round": 6, "RoundNumber": 4, "TotalNumber": 179, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 23, "TotalNumber": 198, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 3, "TotalNumber": 224, "Compensatory": false}
+		],
+		"Dallas Cowboys":[
+		    {"Round": 1, "RoundNumber": 4, "TotalNumber": 4, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 3, "TotalNumber": 34, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 4, "TotalNumber": 67, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 3, "TotalNumber": 101, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 37, "TotalNumber": 135, "Compensatory": true},
+		    {"Round": 5, "RoundNumber": 4, "TotalNumber": 143, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 14, "TotalNumber": 189, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 37, "TotalNumber": 212, "Compensatory": true},
+		    {"Round": 6, "RoundNumber": 41, "TotalNumber": 216, "Compensatory": true}, 
+		    {"Round": 6, "RoundNumber": 42, "TotalNumber": 217, "Compensatory": true}
+		],
+		"Jacksonville Jaguars":[
+		    {"Round": 1, "RoundNumber": 5, "TotalNumber": 5, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 7, "TotalNumber": 38, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 6, "TotalNumber": 69, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 5, "TotalNumber": 103, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 7, "TotalNumber": 146, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 6, "TotalNumber": 181, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 26, "TotalNumber": 201, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 5, "TotalNumber": 226, "Compensatory": false}  
+		],
+		"Baltimore Ravens":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 5, "TotalNumber": 36, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 7, "TotalNumber": 70, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 6, "TotalNumber": 104, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 32, "TotalNumber": 130, "Compensatory": true},
+		    {"Round": 4, "RoundNumber": 34, "TotalNumber": 132, "Compensatory": true},
+		    {"Round": 4, "RoundNumber": 36, "TotalNumber": 134, "Compensatory": true},
+		    {"Round": 6, "RoundNumber": 7, "TotalNumber": 182, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 34, "TotalNumber": 209, "Compensatory": true} 
+		],
+		"San Francisco 49ers":[
+		    {"Round": 1, "RoundNumber": 5, "TotalNumber": 5, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 7, "TotalNumber": 38, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 6, "TotalNumber": 69, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 5, "TotalNumber": 103, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 7, "TotalNumber": 146, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 6, "TotalNumber": 181, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 26, "TotalNumber": 201, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 5, "TotalNumber": 226, "Compensatory": false}
+		],
+		"Miami Dolphins":[
+		    {"Round": 1, "RoundNumber": 5, "TotalNumber": 5, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 7, "TotalNumber": 38, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 6, "TotalNumber": 69, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 5, "TotalNumber": 103, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 7, "TotalNumber": 146, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 6, "TotalNumber": 181, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 26, "TotalNumber": 201, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 5, "TotalNumber": 226, "Compensatory": false} 
+		],
+		"Tampa Bay Buccaneers":[
+		    {"Round": 1, "RoundNumber": 5, "TotalNumber": 5, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 7, "TotalNumber": 38, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 6, "TotalNumber": 69, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 5, "TotalNumber": 103, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 7, "TotalNumber": 146, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 6, "TotalNumber": 181, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 26, "TotalNumber": 201, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 5, "TotalNumber": 226, "Compensatory": false} 
+		],
+		"New York Giants":[
+		    {"Round": 1, "RoundNumber": 5, "TotalNumber": 5, "Compensatory": false}, 
+		    {"Round": 2, "RoundNumber": 7, "TotalNumber": 38, "Compensatory": false},
+		    {"Round": 3, "RoundNumber": 6, "TotalNumber": 69, "Compensatory": false},
+		    {"Round": 4, "RoundNumber": 5, "TotalNumber": 103, "Compensatory": false},
+		    {"Round": 5, "RoundNumber": 7, "TotalNumber": 146, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 6, "TotalNumber": 181, "Compensatory": false},
+		    {"Round": 6, "RoundNumber": 26, "TotalNumber": 201, "Compensatory": false},
+		    {"Round": 7, "RoundNumber": 5, "TotalNumber": 226, "Compensatory": false}  
+		],
+		"Chicago Bears":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"New Orleans Saints":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Philadelphia Eagles":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Oakland Raiders":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Los Angeles Rams":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Detroit Lions":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Atlanta Falcons":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Indianapolis Colts":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Buffalo Bills":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"New York Jets":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Washington Redskins":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Houston Texans":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Minnesota Vikings":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Cincinnati Bengals":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Pittsburgh Steelers":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Seattle Seahawks":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Green Bay Packers":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Kansas City Chiefs":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"New England Patriots":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Arizona Cardinals":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Carolina Panthers":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		],
+		"Denver Broncos":[
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false}, 
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false},
+		    {"Round": 1, "RoundNumber": 6, "TotalNumber": 6, "Compensatory": false} 
+		]
+	}
+	]
+}

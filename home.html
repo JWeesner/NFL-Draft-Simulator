@@ -1,0 +1,129 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>MockDraftSimulator.com</title>
+		<link rel="stylesheet" type="text/css" href="css/core.css">
+		<link rel="stylesheet" type="text/css" href="css/button.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+	</head>
+	<body ng-init="name='Josh'">
+		<div id="main">
+			<div id="content">
+				<div id="contentBackground"><span id="backgroundSpan" style="font-size: 18pt">Team Selection</span></div>
+				<div id="left" style="float: left; width:50%">
+					<br><br>
+					<img ng-src="images/logos/{{team}}.png" style="width:60%;margin-left:19%">
+					<br><br>
+					<div style="margin-left:15%">
+						<span style="font-family: Lato;font-weight: bold;">User Name:</span><br>
+						<input type="text" />
+					</div>
+					<br><br>
+					<select id="teams" style="width:70%;" ng-model="team" ng-init="team='Buffalo Bills'">
+					</select>
+					<br><br><br>
+					<a class="button black" style="width:auto; margin-left:33%">Start Drafting!</a><br>
+				</div>
+				<div id="right" style="float: right; width:50%">
+					<br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%"> {{ team }}' Draft Picks:</span>
+					<br><br>
+					<table class="styledTable"  style="width:80%;border-collapse:collapse;">
+						<tr class="topChild">
+							<th>Round</th>
+							<th>Pick #</th>
+							<th>Overall</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/angular.js"></script>
+	</body>
+
+	<select class="nfl-teams-divisions">
+		<optgroup label="AFC East">
+			<option>Buffalo Bills</option>
+			<option>Miami Dolphins</option>
+			<option>New England Patriots</option>
+			<option>New York Jets</option>
+		</optgroup>
+		<optgroup label="AFC North">
+			<option>Baltimore Ravens</option>
+			<option>Cincinnati Bengals</option>
+			<option>Cleveland Browns</option>
+			<option>Pittsburgh Steelers</option>
+		</optgroup>
+		<optgroup label="AFC South">
+			<option>Houston Texans</option>
+			<option>Indianapolis Colts</option>
+			<option>Jacksonville Jaguars</option>
+			<option>Tennessee Titans</option>
+		</optgroup>
+		<optgroup label="AFC West">
+			<option>Denver Broncos</option>
+			<option>Kansas City Chiefs</option>
+			<option>Oakland Raiders</option>
+			<option>San Diego Chargers</option>
+		</optgroup>
+		<optgroup label="NFC East">
+			<option>Dallas Cowboys</option>
+			<option>New York Giants</option>
+			<option>Philadelphia Eagles</option>
+			<option>Washington Redskins</option>
+		</optgroup>
+		<optgroup label="NFC North">
+			<option>Chicago Bears</option>
+			<option>Detroit Lions</option>
+			<option>Green Bay Packers</option>
+			<option>Minnesota Vikings</option>
+		</optgroup>
+		<optgroup label="NFC South">
+			<option>Atlanta Falcons</option>
+			<option>Carolina Panthers</option>
+			<option>New Orleans Saints</option>
+			<option>Tampa Bay Buccaneers</option>
+		</optgroup>
+		<optgroup label="NFC West">
+			<option>Arizona Cardinals</option>
+			<option>Los Angeles Rams</option>
+			<option>San Francisco 49ers</option>
+			<option>Seattle Seahawks</option>
+		</optgroup>
+	</select>
+</html>
+
+<script type="text/javascript">
+	var $teamsDivisions = $(".nfl-teams-divisions");
+   	var teamsOptions = $teamsDivisions.html();
+  	$teamsDivisions.remove();
+  	$('#teams').select2();
+  	$('#teams').append(teamsOptions);
+  	$("#teams").select2({
+	  templateResult: formatState
+	}).on("select2:select", function (event) { 
+		console.log($("#teams").val()); 
+
+	});;
+
+	$('.hidden').prop('disabled', true);
+
+	$.getJSON('teamPicks2016.json', function(json) {
+		$.each(json.teams, function(){
+			$.each(this, function() {
+				console.log(this.TotalNumber);
+			});
+		});
+	});
+
+
+  	function formatState (team) {
+	  if (!team.id) { return team.text; }
+	  var $team = $(
+	    '<span><img src="images/logos/' + team.text.replace(/^\s+|\s+$/g,'') + '.png" class="img-flag" style="width:20%" /> ' + team.text + '</span>'
+	  );
+	  return $team;
+	};
+</script>
