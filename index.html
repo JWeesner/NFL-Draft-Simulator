@@ -23,7 +23,7 @@
 					</div>
 					<br><br>
 					<span style="font-family: Lato;font-weight: bold;margin-left:15%">Team:</span><br>
-					<select id="teams" style="width:70%;" ng-model="team" ng-init="team='Buffalo Bills'">
+					<select id="teams" style="width:70%;" ng-model="team" ng-init="team='Tennessee Titans'">
 					</select>
 					<br><br><br>
 					<a class="button black" style="width:auto; margin-left:33%">Start Drafting!</a><br>
@@ -39,6 +39,8 @@
 							<th>Overall</th>
 						</tr>
 					</table>
+					<br><br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%" ng-init="valt='0'"> Total value: <span id="points"></span></span>
 				</div>
 			</div>
 		</div>
@@ -98,54 +100,90 @@
 </html>
 
 <script type="text/javascript">
-	//page starter code to set up select2 box
-	var $teamsDivisions = $(".nfl-teams-divisions");
-   	var teamsOptions = $teamsDivisions.html();
-   	var picks = {};
-   	//we have the table loaded into a variable, remove it from the page now
-  	$teamsDivisions.remove();
-  	$('#teams').select2();
-  	//append all of the table data into our select2 variable
-  	$('#teams').append(teamsOptions);
-  	$("#teams").select2({
-	  templateResult: formatState,
-	}).on("change", function (event) {
-		//when a team is picked clear the table and fill with selected team's draft picks 
-		team = $("#teams").val(); 
-		var teamPicks = picks[team];
-		var index = 1;
-		$("#picksTable").find("tr:gt(0)").remove();
-		teamPicks.forEach(function(entry) {
-			var table = document.getElementById("picksTable");
-		    var row = table.insertRow(index);
-		    var cell1 = row.insertCell(0);
-		    var cell2 = row.insertCell(1);
-		    var cell3 = row.insertCell(2);
-		    cell1.innerHTML = entry.Round;
-		    cell2.innerHTML = entry.RoundNumber;
-		    cell3.innerHTML = entry.TotalNumber;
-		    //used to style picks table properly
-		    if (index % 2 == 0) {
-		    	row.className = "even";
-		    } else {
-		    	row.className = "odd";
-		    }
-		    row.style = "text-align:center;font-weight:bold";
-		    index++;
-		    console.log(entry);
-		}, this);
-	});
-
 	//on page-load pull in json data and create local array to be used and manipulated
 	$(document).ready(function() {
 		console.log('test');
-		$.getJSON('data/teamPicks2016.json', function(json) {
+		var picks = [];
+		var values = {};
+		//$.getJSON('data/teamPicks2016.json', function(json) {
+		var count = 0;
+		$.getJSON('data/picks.json', function(json) {
+			$.each(json.picks, function(){
+				picks.push(json.picks[count]);
+				//console.log(picks);
+				//console.log(json.picks[count]);
+				count++;
+			});
+		/*
+			console.log(json);
 			$.each(json.teams, function(){
 				picks = json.teams[0];
-				$("#teams").val("Tennessee Titans").trigger("change");
+				
+				console.log(json.teams[0]);
 			});
+*/
 		});
+		$.getJSON('data/pickValues.json', function(json) {
+			values = json;
+		});
+		setTimeout(function(){ 
+			console.log(picks.length);
+			initSelect2(picks, values);
+			$("#teams").val("Tennessee Titans").trigger("change");
+		}, 80);
 	});
+
+	function initSelect2(picks, values){
+		//page starter code to set up select2 box
+		var $teamsDivisions = $(".nfl-teams-divisions");
+	   	var teamsOptions = $teamsDivisions.html();
+	   	//we have the table loaded into a variable, remove it from the page now
+	  	$teamsDivisions.remove();
+	  	$('#teams').select2();
+	  	//append all of the table data into our select2 variable
+	  	$('#teams').append(teamsOptions);
+	  	$("#teams").select2({
+		  templateResult: formatState,
+		}).on("change", function (event) {
+			//when a team is picked clear the table and fill with selected team's draft picks 
+			team = $("#teams").val(); 
+			//var teamPicks = picks[team];
+			var teamPicks = [];
+			console.log(picks.length);
+			console.log(picks);
+			for(var i = 0; i < picks.length; i++){
+				console.log(picks[i]["Team"]);
+				if(picks[i]["Team"] == team){
+					teamPicks.push(picks[i]);
+				}
+			}
+			var index = 1;
+			var value = 0;
+			$("#picksTable").find("tr:gt(0)").remove();
+			teamPicks.forEach(function(entry) {
+				var table = document.getElementById("picksTable");
+			    var row = table.insertRow(index);
+			    var cell1 = row.insertCell(0);
+			    var cell2 = row.insertCell(1);
+			    var cell3 = row.insertCell(2);
+			    cell1.innerHTML = entry.Round;
+			    cell2.innerHTML = entry.RoundNumber;
+			    cell3.innerHTML = entry.TotalNumber;
+			    value += values[entry.TotalNumber - 1];
+			    value = Math.round(value);
+			    $("#points").html(value);
+			    console.log(value);
+			    //used to style picks table properly
+			    if (index % 2 == 0) {
+			    	row.className = "even";
+			    } else {
+			    	row.className = "odd";
+			    }
+			    row.style = "text-align:center;font-weight:bold";
+			    index++;
+			}, this);
+		});
+	}
 
 	//used to properly create select2 element with team logos to the left of team names
   	function formatState (team) {
