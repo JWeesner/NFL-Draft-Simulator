@@ -1,0 +1,208 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>MockDraftSimulator.com</title>
+		<link rel="stylesheet" type="text/css" href="css/draft.css">
+		<link rel="stylesheet" type="text/css" href="css/button.css">
+		<link rel="shortcut icon" href="images/logos/Draft.png" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="content">
+				<div id="contentBackground"><span id="backgroundSpan" style="font-size: 18pt">2016 NFL Draft</span></div>
+				<div id="left" style="display:inline-block;float: left; width:50%">
+					<br><br>
+					<img ng-src="images/logos/{{team}}.png" style="width:60%;margin-left:19%">
+					<br><br>
+					<br><br>
+					<br><br><br>
+					<a class="button black" onclick="simPick()" style="width:auto; margin-left:33%">Start Drafting!</a><br>
+				</div>
+				<div id="center" style="display:inline-block;float: center; width:25%">
+					<br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%"> Last 5 Picks:</span>
+					<br><br>
+					<table id="lastPicks" class="styledTable" style="width:90%;border-collapse:collapse;">
+						<tr class="topChild">
+							<th>Team</th>
+							<th>Selection</th>
+						</tr>
+						<tbody>
+							<tr class="odd">
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="even">
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="odd">
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="even">
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="odd">
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%"> Next 5 Picks:</span>
+					<br><br>
+					<table class="styledTable" id="nextPicks" style="width:90%;border-collapse:collapse;">
+						<tr class="topChild">
+							<th>Round</th>
+							<th>Pick #</th>
+							<th>Team</th>
+						</tr>
+					</table>
+					<br><br>
+				</div>
+				<div id="right" style="display:inline-block;float: right; width:25%">
+					<br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%"> Baltimore Ravens' Draft Picks:</span>
+					<br><br>
+					<table class="styledTable" id="picksTable" style="width:90%;border-collapse:collapse;">
+						<tr class="topChild">
+							<th>Round</th>
+							<th>Pick #</th>
+							<th>Selection</th>
+						</tr>
+					</table>
+					<br><br>
+					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%" ng-init="valt='0'"> Total value: <span id="points"></span></span>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/angular.js"></script>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var picks = [];
+	var picked = [];
+	var values = {};
+	var players = [];
+	//on page-load pull in json data and create local array to be used and manipulated
+	$(document).ready(function() {
+		var team = "Baltimore Ravens";
+		var count = 0;
+		$.getJSON('data/picks.json', function(json) {
+			$.each(json.picks, function(){
+				picks.push(json.picks[count]);
+				count++;
+			});
+		});
+		setTimeout(function(){
+			count = 0;
+			$.getJSON('data/MattMillerBigBoard.json', function(json) {
+				$.each(json.players, function(){
+					players.push(json.players[count]);
+					count++;
+				});
+			});
+		}, 80);
+		$.getJSON('data/pickValues.json', function(json) {
+			values = json;
+		});
+		setTimeout(function(){
+			console.log(players);
+			fillTables(picks, values, team);
+		}, 80);
+	});
+
+	function fillTables(picks, values, team){
+		var teamPicks = [];
+		for(var i = 0; i < picks.length; i++){
+			if(picks[i]["Team"] == team){
+				teamPicks.push(picks[i]);
+			}
+		}
+		var index = 1;
+		var value = 0;
+		$("#picksTable").find("tr:gt(0)").remove();
+		teamPicks.forEach(function(entry) {
+			var table = document.getElementById("picksTable");
+		    var row = table.insertRow(index);
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    cell1.innerHTML = entry.Round;
+		    cell2.innerHTML = entry.RoundNumber;
+		    value += values[entry.TotalNumber - 1];
+		    value = Math.round(value);
+		    $("#points").html(value);
+		    //used to style picks table properly
+		    if (index % 2 == 0) {
+		    	row.className = "even";
+		    } else {
+		    	row.className = "odd";
+		    }
+		    row.style = "text-align:center;font-weight:bold";
+		    index++;
+		}, this);
+		for(var i=0; i<5; i++){
+			var table = document.getElementById("nextPicks");
+			var row = table.insertRow(i+1);
+			var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+		    cell1.innerHTML = picks[i].Round;
+		    cell2.innerHTML = picks[i].RoundNumber;
+		    cell3.innerHTML = picks[i].Team;
+		    if (i % 2 == 0) {
+		    	row.className = "even";
+		    } else {
+		    	row.className = "odd";
+		    }
+		}
+	};
+
+	function simPick(){
+		incrementNextPicks();
+		updateLastPicks();
+	}
+
+	function incrementNextPicks(){
+		$('#nextPicks tr:eq(1)').remove();
+		var table = document.getElementById("nextPicks");
+		var row = table.insertRow(5);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		cell1.innerHTML = picks[5].Round;
+		cell2.innerHTML = picks[5].RoundNumber;
+		cell3.innerHTML = picks[5].Team;
+		if (picks[5].TotalNumber % 2 == 0) {
+	    	row.className = "odd";
+	    } else {
+	    	row.className = "even";
+	    }
+	}
+
+	function updateLastPicks(){
+		var table = document.getElementById("lastPicks");
+		if(table.rows.length == 6){
+			$('#lastPicks tr:eq(1)').remove();
+		}
+		var row = table.insertRow(table.rows.length);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		cell1.innerHTML = picks[0].Team;
+		cell2.innerHTML = players[0].name;
+		players.shift();
+		if (picks[0].TotalNumber % 2 == 0) {
+	    	row.className = "odd";
+	    } else {
+	    	row.className = "even";
+	    }
+	    picks.shift();
+	}
+</script>

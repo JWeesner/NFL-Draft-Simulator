@@ -26,13 +26,13 @@
 					<select id="teams" style="width:70%;" ng-model="team" ng-init="team='Tennessee Titans'">
 					</select>
 					<br><br><br>
-					<a class="button black" style="width:auto; margin-left:33%">Start Drafting!</a><br>
+					<a href="draft.html" class="button black" style="width:auto; margin-left:33%">Start Drafting!</a><br>
 				</div>
 				<div id="right" style="float: right; width:50%">
 					<br>
 					<span style="font-family: Lato; font-weight: 600; font-size: 16pt; margin-left:6%"> {{ team }}' Draft Picks:</span>
 					<br><br>
-					<table class="styledTable" id="picksTable" style="width:80%;border-collapse:collapse;">
+					<table class="styledTable" id="picksTable" style="height:50%;width:80%;border-collapse:collapse;">
 						<tr class="topChild">
 							<th>Round</th>
 							<th>Pick #</th>
@@ -105,23 +105,12 @@
 		console.log('test');
 		var picks = [];
 		var values = {};
-		//$.getJSON('data/teamPicks2016.json', function(json) {
 		var count = 0;
 		$.getJSON('data/picks.json', function(json) {
 			$.each(json.picks, function(){
 				picks.push(json.picks[count]);
-				//console.log(picks);
-				//console.log(json.picks[count]);
 				count++;
 			});
-		/*
-			console.log(json);
-			$.each(json.teams, function(){
-				picks = json.teams[0];
-				
-				console.log(json.teams[0]);
-			});
-*/
 		});
 		$.getJSON('data/pickValues.json', function(json) {
 			values = json;
@@ -146,8 +135,7 @@
 		  templateResult: formatState,
 		}).on("change", function (event) {
 			//when a team is picked clear the table and fill with selected team's draft picks 
-			team = $("#teams").val(); 
-			//var teamPicks = picks[team];
+			team = $("#teams").val();
 			var teamPicks = [];
 			console.log(picks.length);
 			console.log(picks);
